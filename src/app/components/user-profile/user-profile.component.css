@@ -1,0 +1,30 @@
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.user-profile h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.user-profile p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.user-profile .edit-button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user-profile .edit-button:hover {
+    background-color: #0056b3;
+}

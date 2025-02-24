@@ -1,0 +1,57 @@
+<div class="register-form bg-gradient-to-r from-blue-200  p-4 rounded-lg shadow-lg">
+  <form (ngSubmit)="onSubmit()" #registerForm="ngForm"
+    class="md:w-1/2 lg:w-1/4 xs:w-full space-y-4  m-auto pt-4 shadow-md bg-white p-4 rounded">
+    <h1 class="text-3xl font-bold text-center">Register</h1>
+    <div class="flex flex-col space-y-1">
+      <label for="name" class="text-sm font-medium text-gray-700">Name:</label>
+      <input type="text" id="name" required [(ngModel)]="user.name" name="name" class="bg-gray-100 p-2 rounded-md">
+    </div>
+
+    <div class="flex flex-col space-y-1">
+      <label for="age" class="text-sm font-medium text-gray-700">Age:</label>
+      <input type="number" id="age" required [(ngModel)]="user.age" name="age" class="bg-gray-100 p-2 rounded-md">
+    </div>
+
+    <div class="flex flex-col space-y-1">
+      <label for="mobile" class="text-sm font-medium text-gray-700">Mobile:</label>
+      <input type="text" id="mobile" [(ngModel)]="user.mobile" name="mobile" class="bg-gray-100 p-2 rounded-md">
+    </div>
+
+    <div class="flex flex-col space-y-1">
+      <label for="email" class="text-sm font-medium text-gray-700">Email:</label>
+      <input type="email" id="email" required [(ngModel)]="user.email" name="email" class="bg-gray-100 p-2 rounded-md">
+    </div>
+
+    <div class="flex flex-col space-y-1">
+      <label for="address" class="text-sm font-medium text-gray-700">Address:</label>
+      <input type="text" id="address" [(ngModel)]="user.address" name="address" class="bg-gray-100 p-2 rounded-md">
+    </div>
+
+    <div class="flex flex-col space-y-1">
+      <label for="aadharCardNumber" class="text-sm font-medium text-gray-700">Aadhar Card Number:</label>
+      <input type="number" id="aadharCardNumber" required [(ngModel)]="user.aadharCardNumber" name="aadharCardNumber"
+        class="bg-gray-100 p-2 rounded-md">
+    </div>
+
+    <div class="flex flex-col space-y-1">
+      <label for="password" class="text-sm font-medium text-gray-700">Password:</label>
+      <input type="password" id="password" required [(ngModel)]="user.password" name="password"
+        class="bg-gray-100 p-2 rounded-md">
+    </div>
+
+    <div class="flex flex-col space-y-1">
+      <label for="role" class="text-sm font-medium text-gray-700">Role:</label>
+      <select id="role" [(ngModel)]="user.role" name="role" class="bg-gray-100 p-2 rounded-md">
+        <option value="voter">Voter</option>
+        <option value="admin">Admin</option>
+      </select>
+    </div>
+
+    <div>
+      <div class="m-auto w-fit text-center"><button type="submit"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">Register</button>
+        <br>Or <a routerLink="/login" class="text-blue-500"> <br>Login</a>
+      </div>
+    </div>
+  </form>
+</div>
