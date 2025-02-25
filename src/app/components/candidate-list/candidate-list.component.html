@@ -4,7 +4,7 @@
         <h2 class="text-2xl font-bold mb-4 text-center">Candidate List</h2>
         <ul class="space-y-4 ">
             <li *ngFor="let candidate of candidates; let i='index'"
-                class="p-4 border rounded-lg d-link hover:bg-green-200" (click)="vote(i)">
+                class="p-4 my-3 border rounded-lg d-link hover:bg-green-200" (click)="vote(i)">
                 <h3 class="text-xl font-semibold ">{{ candidate.name }}</h3>
                 <p class="text-gray-700">Party: {{ candidate.party }}</p>
                 <p class="text-gray-700">Age: {{ candidate.age }}</p>

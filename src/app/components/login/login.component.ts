@@ -18,16 +18,17 @@ export class LoginComponent {
     aadharCardNumber: '',
     password: ''
   }
+  loading: boolean = false;
   constructor(private authService: AuthService, private router: Router) {
 
   }
 
   onSubmit() {
-    console.log("login === ", this.login);
-
+    this.loading = true;
     this.authService.login(this.login.aadharCardNumber, this.login.password).subscribe(
       response => {
         localStorage.setItem('token', response.token);
+
         this.router.navigate(['/userProfile']);
       }
     );

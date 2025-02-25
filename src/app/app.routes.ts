@@ -3,9 +3,15 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
     {
         path: "",
-        title: "Register User",
+        title: " Home ",
         loadComponent: () =>
-            import("./components/register/register.component").then((p) => p.RegisterComponent),
+            import("./components/home/home.component").then((p) => p.HomeComponent),
+    },
+    {
+        path: "home",
+        title: " Home ",
+        loadComponent: () =>
+            import("./components/home/home.component").then((p) => p.HomeComponent),
     },
     {
         path: "signup",

@@ -1,0 +1,8 @@
+.sec-1 {
+    background-color: #000307;
+}
+
+.sec-1 figure {
+    display: flex;
+    align-items: center;
+}

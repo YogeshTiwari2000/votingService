@@ -50,6 +50,6 @@ export class UserProfileComponent implements OnInit {
   }
   logOut() {
     this.localStr.clear();
-    this.router.navigate(['/signup']);
+    this.router.navigate(['/login']);
   }
 }
