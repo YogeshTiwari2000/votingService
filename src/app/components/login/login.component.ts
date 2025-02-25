@@ -24,16 +24,19 @@ export class LoginComponent {
   }
 
   onSubmit() {
-    this.loading = true;
-    this.authService.login(this.login.aadharCardNumber, this.login.password).subscribe(
-      response => {
+    this.loading = true; // Start loading
+    this.authService.login(this.login.aadharCardNumber, this.login.password).subscribe({
+      next: (response) => {
         localStorage.setItem('token', response.token);
-
         this.router.navigate(['/userProfile']);
+      },
+      error: (err) => {
+        alert('Invalid Credentials');
+        this.loading = false; // Stop loading on error
       }
-    );
-
+    });
   }
+
   forgetPassword() {
 
   }
